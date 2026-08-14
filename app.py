@@ -410,12 +410,13 @@ def sports():
     for s in rows: body+=f'<div class="card"><h2>🏆 {s["sport"]}</h2><p>{s["event"]}</p><p>📅 {s["date"]} · 📍 {s["venue"]}</p></div>'
     return page(body,"Sports • StudentHub")
 
-if __name__=="__main__":
-    init_db()
+# Initialize database when Flask/Gunicorn starts
+init_db()
+
+if __name__ == "__main__":
     print("\n🎓 StudentHub is running")
     print("Laptop: http://127.0.0.1:5000")
     print("Student: student@demo.com / 1234")
     print("Teacher: teacher@demo.com / 1234\n")
-    app.run(host="0.0.0.0",port=5000,debug=True)
 
-    app = flask(studenthub)
+    app.run(host="0.0.0.0", port=5000, debug=True)
