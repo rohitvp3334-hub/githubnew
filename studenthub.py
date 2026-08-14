@@ -417,3 +417,5 @@ if __name__=="__main__":
     print("Student: student@demo.com / 1234")
     print("Teacher: teacher@demo.com / 1234\n")
     app.run(host="0.0.0.0",port=5000,debug=True)
+
+    app = flask(studenthub)
